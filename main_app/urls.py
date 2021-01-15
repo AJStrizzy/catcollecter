@@ -9,5 +9,10 @@ urlpatterns = [
     path('cats/create/', views.CatCreate.as_view(), name="cats_create"),
     path('cats/<int:pk>/update/', views.CatUpdate.as_view(), name="cats_update"),
     path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name="cats_delete"),
-    path('user/<username>', views.profile, name='profile')
+    path('user/<username>', views.profile, name='profile'),
+    path('cattoys/', views.cattoys_index, nane='cattoys_index'),
+    path('cattoys/<int:cattoy_id>', views.cattoys_show, nane='cattoys_show'),
+    path('cattoys/create/', views.CatToyCreate.as_view(), nane='cattoys_create'),
+    path('cattoys/<int:pk>/update/', views.CatToyUpdate.as_view(), nane='cattoys_update'),
+    path('cattoys/<int:pk>/delete', views.CatToyDelete.as_view(), nane='cattoys_delete'),
 ]
