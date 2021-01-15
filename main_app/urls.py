@@ -10,9 +10,12 @@ urlpatterns = [
     path('cats/<int:pk>/update/', views.CatUpdate.as_view(), name="cats_update"),
     path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name="cats_delete"),
     path('user/<username>', views.profile, name='profile'),
-    path('cattoys/', views.cattoys_index, nane='cattoys_index'),
-    path('cattoys/<int:cattoy_id>', views.cattoys_show, nane='cattoys_show'),
-    path('cattoys/create/', views.CatToyCreate.as_view(), nane='cattoys_create'),
-    path('cattoys/<int:pk>/update/', views.CatToyUpdate.as_view(), nane='cattoys_update'),
-    path('cattoys/<int:pk>/delete', views.CatToyDelete.as_view(), nane='cattoys_delete'),
+    path('cattoys/', views.cattoys_index, name='cattoys_index'),
+    path('cattoys/<int:cattoy_id>', views.cattoys_show, name='cattoys_show'),
+    path('cattoys/create/', views.CatToyCreate.as_view(), name='cattoys_create'),
+    path('cattoys/<int:pk>/update/', views.CatToyUpdate.as_view(), name='cattoys_update'),
+    path('cattoys/<int:pk>/delete/', views.CatToyDelete.as_view(), name='cattoys_delete'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('signup/', views.signup, name='signup')
 ]
